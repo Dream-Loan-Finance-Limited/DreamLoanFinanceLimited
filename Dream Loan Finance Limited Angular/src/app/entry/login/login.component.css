@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: monospace
+
+}
+.banner
+{
+    
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.50),rgba(0,0,0,0.50)),url(src\assets\HL.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.form
+{
+    
+ 
+    color: #ffffff;
+    justify-content: center;
+    
+}
+button
+{
+
+    text-align: center;
+    width: 100px;
+    padding: 5px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 10px;
+    font-weight: bold;
+    border: 2px solid #4ae3d4;
+    background: transparent;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+
+}
+.button
+{
+    text-align: center;
+}
+.form h2
+{
+    text-align: center;
+    font-family: monospace;
+    
+}
+.was-validated
+{
+    align-self: center;
+}
+h2{
+    margin-top: 200px;
+    font-family: monospace;
+    font-weight: bolder;
+    text-align: center;
+}
+input
+{
+    padding: 10px;
+  
+    width: 80%;
+
+    margin-top: 20px;
+    margin-left: 70px;
+}
+label
+{
+    margin-left: 70px;
+    font-size: larger;
+    font-weight: bolder;
+    margin-top: 15px;
+
+    
+}
+span
+{
+    background: #4ae3d4;
+    height: 100%;
+    width: 0;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+
+}
+button:hover span
+{
+    width: 100%;
+}
+button:hover {
+    border: none;
+
+}

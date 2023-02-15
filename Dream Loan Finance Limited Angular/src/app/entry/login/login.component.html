@@ -1,0 +1,30 @@
+<div class="banner">
+<div class="row">
+  <div class="col-4"></div>
+  <div class="col-4">
+  <div class="form" >
+    <h2>LOGIN HERE</h2>
+    
+    <form  class="was-validated" [formGroup]="loginForm" (ngSubmit)="onSubmitLogin()">
+      <div class="form-group mb-2 mr-sm-4">
+        <label for="uname">User Name:</label>
+        <input type="text" class="form-control" formControlName="userName" placeholder="Enter username" name="uname" required>
+        <!-- <div class="valid-feedback">Valid.</div> -->
+        <!-- <div class="invalid-feedback">Please fill out this field.</div> -->
+      </div>
+      <div class="form-group mb-2 mr-sm-4">
+        <label for="pwd">Password:</label>
+        <input type="password" class="form-control" formControlName="password" placeholder="Enter password" name="pswd" required>
+        <!-- <div class="valid-feedback">Valid.</div> -->
+        <!-- <div class="invalid-feedback">Please fill out this field.</div> -->
+      </div>
+      <div class="button">
+      <button type="submit" class="btn btn-success btn-lg" (click)="onSubmitLogin()"><span></span>Login</button>
+    </div>
+    </form>
+  </div>
+  <div class="col-4"></div>
+</div>
+</div>
+
+</div>

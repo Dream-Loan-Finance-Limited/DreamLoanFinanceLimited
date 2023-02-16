@@ -12,6 +12,7 @@ import { HeaderComponent } from './includes/header/header.component';
 import { FooterComponent } from './includes/footer/footer.component';
 import { EmiCalculatorComponent } from './entry/emi-calculator/emi-calculator.component';
 import { EnquryComponent } from './entry/enqury/enqury.component';
+import { AboutusComponent } from './entry/aboutus/aboutus.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { EnquryComponent } from './entry/enqury/enqury.component';
     HeaderComponent,
     FooterComponent,
     EmiCalculatorComponent,
-    EnquryComponent
+    EnquryComponent,
+    AboutusComponent
   ],
   imports: [
     BrowserModule,

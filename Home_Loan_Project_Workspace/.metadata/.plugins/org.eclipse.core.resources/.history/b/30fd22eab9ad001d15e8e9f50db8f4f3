@@ -1,0 +1,9 @@
+package com.homeloan.myapp.serviceI;
+
+import com.homeloan.myapp.entities.Ledger;
+
+public interface LedgerServiceI {
+
+	public Ledger saveAllLedgerDetail(Ledger ledger);
+
+}

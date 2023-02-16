@@ -13,7 +13,6 @@ import lombok.NoArgsConstructor;
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
-
 public class CustomerBankDetails {
 
 	@Id

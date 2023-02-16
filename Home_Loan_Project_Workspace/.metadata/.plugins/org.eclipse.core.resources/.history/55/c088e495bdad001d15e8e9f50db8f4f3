@@ -1,0 +1,30 @@
+package com.homeloan.myapp.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.homeloan.myapp.entities.BaseResponce;
+import com.homeloan.myapp.entities.Ledger;
+import com.homeloan.myapp.serviceI.LedgerServiceI;
+
+@RestController
+@RequestMapping("/ledger")
+public class LedgerController {
+
+	@Autowired
+	private LedgerServiceI ledgerServiceI;
+	
+	//API FOR SAVE ALL LEDGER 
+	@PostMapping("/saveLedgerDetails")
+	public ResponseEntity<Ledger> saveLedgerDetail(@RequestBody Ledger ledger)
+	{
+		Ledger save=ledgerServiceI.saveAllLedgerDetail(ledger);
+		return new ResponseEntity<Ledger>(save,HttpStatus.CREATED);
+	}
+}

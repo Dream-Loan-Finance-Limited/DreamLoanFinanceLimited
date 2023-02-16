@@ -1,0 +1,21 @@
+package com.homeloan.myapp.serviceImpl;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.homeloan.myapp.entities.Customer;
+import com.homeloan.myapp.repository.CustomerRepository;
+import com.homeloan.myapp.serviceI.CustomerServiceI;
+
+@Service
+public class CustomerServiceImpl implements CustomerServiceI{
+
+	@Autowired
+	private CustomerRepository customerRepository;
+	
+	@Override
+	public Customer SaveCustomerDeails(Customer customer) {
+		return null;
+	}
+
+}

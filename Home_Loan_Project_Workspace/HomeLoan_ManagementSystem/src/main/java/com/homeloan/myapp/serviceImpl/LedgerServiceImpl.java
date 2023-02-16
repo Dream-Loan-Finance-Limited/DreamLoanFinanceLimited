@@ -1,0 +1,63 @@
+package com.homeloan.myapp.serviceImpl;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.homeloan.myapp.entities.Ledger;
+import com.homeloan.myapp.repository.LedgerRepository;
+import com.homeloan.myapp.serviceI.LedgerServiceI;
+
+@Service
+public class LedgerServiceImpl implements LedgerServiceI {
+
+	@Autowired
+	private LedgerRepository ledgerRepository;
+
+	@Override
+	public Ledger saveAllLedgerDetail(Ledger ledger) {
+		return ledgerRepository.save(ledger);
+	}
+
+	@Override
+	public List<Ledger> getAllLedgerDetails() {
+		return ledgerRepository.findAll();
+	}
+
+	
+
+//	@Override
+//	public Ledger getLedgerById(Integer ledgerId) {
+//		Optional<Ledger> findById = ledgerRepository.getLedgerById(ledgerId);
+//		if (findById.isPresent()) {
+//			Ledger ledger = findById.get();
+//			return ledger;
+//		}
+//		return new Ledger();
+//	}
+
+	@Override
+	public String defaultercount(Integer ledgerId) {
+		List<Ledger> ledgers = ledgerRepository.findByLedgerId(ledgerId);
+
+		int count = 0;
+
+		for (Ledger a : ledgers) {
+
+			System.out.println(a);
+			if (a.getDefaultEmiCount() == 0) {
+				count = 0;
+			}
+			if (a.getDefaultEmiCount() == 1) {
+				count++;
+				if (count == 3) {
+
+					return "This LedgerId" + ledgerId + "is Defaulter";
+				}
+			}
+		}
+		return "This LedgerId" + ledgerId + "is Not Defaulter";
+	}
+}

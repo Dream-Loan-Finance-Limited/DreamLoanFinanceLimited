@@ -31,4 +31,5 @@ public class Documents {
 	@Lob
 	private byte[] incomeProof;
 	
+	private byte[] bankPassBook;
 }

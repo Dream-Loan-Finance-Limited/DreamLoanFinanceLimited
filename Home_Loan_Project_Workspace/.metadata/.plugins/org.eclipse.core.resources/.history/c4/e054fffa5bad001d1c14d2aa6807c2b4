@@ -1,0 +1,5 @@
+package com.homeloan.myapp.serviceImpl;
+
+public abstract class SanctionLetterServiceImpl {
+
+}

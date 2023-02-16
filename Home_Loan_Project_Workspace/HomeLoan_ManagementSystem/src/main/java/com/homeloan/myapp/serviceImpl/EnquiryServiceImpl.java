@@ -1,6 +1,7 @@
 package com.homeloan.myapp.serviceImpl;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -23,6 +24,12 @@ public class EnquiryServiceImpl implements EnquiryServiceI {
 	@Override
 	public List<Enquiry> getAllEnquiryData() {
 		return enquiryRepository.findAll();
+	}
+
+	@Override
+	public Optional<Enquiry> getsingleEnquiryDetail(Integer enquiryId) {
+		Optional<Enquiry> singleenquiry = enquiryRepository.findById(enquiryId);
+		return singleenquiry;
 	}
 
 }

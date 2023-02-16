@@ -13,6 +13,7 @@ export class EnquiryServiceService {
   saveEnquiry(enquirydata:FormGroup)
   {
    return this.http.post("http://localhost:9090/saveEnquiry",enquirydata);
+
   }
 
   getEnquiry()
@@ -20,5 +21,17 @@ export class EnquiryServiceService {
     return this.http.get<any[]>("http://localhost:9090/getAllEnquiryDatails");
     
   }
+
+  deleteEnquiry(enquiry:any)
+  {
+     return this.http.delete("http://localhost:9090/deleteenquiry/"+enquiry.enquiryId);
+  }
+
+updateenquiry(enquiry:any)
+  {
+    return this.http.put("http://localhost:9090/update",enquiry);
+    console.log(enquiry)
+  }
+
 
 }

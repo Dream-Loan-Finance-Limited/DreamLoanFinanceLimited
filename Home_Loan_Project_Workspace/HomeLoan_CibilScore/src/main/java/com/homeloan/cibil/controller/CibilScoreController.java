@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.homeloan.cibil.entities.CibilScore;
 import com.homeloan.cibil.serviceI.CibilScoreServiceI;
-
+ 
 @RestController
 public class CibilScoreController {
 

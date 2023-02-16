@@ -1,0 +1,23 @@
+package com.homeloan.myapp.serviceImpl;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.homeloan.myapp.entities.Ledger;
+import com.homeloan.myapp.repository.LedgerRepository;
+import com.homeloan.myapp.serviceI.LedgerServiceI;
+
+@Service
+public class LedgerServiceImpl implements LedgerServiceI{
+
+	@Autowired
+	private LedgerRepository ledgerRepository;
+
+	@Override
+	public Ledger saveAllLedgerDetail(Ledger ledger) {
+		return ledgerRepository.save(ledger);
+	}
+	
+	
+
+}

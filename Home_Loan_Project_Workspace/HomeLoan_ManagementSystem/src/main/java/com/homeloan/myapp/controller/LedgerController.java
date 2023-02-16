@@ -1,0 +1,57 @@
+package com.homeloan.myapp.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.homeloan.myapp.entities.BaseResponce;
+import com.homeloan.myapp.entities.Ledger;
+import com.homeloan.myapp.serviceI.LedgerServiceI;
+
+@RestController
+@RequestMapping("/ledger")
+public class LedgerController {
+
+	@Autowired
+	private LedgerServiceI ledgerServiceI;
+	
+	//API FOR SAVE LEDGER 
+	@PostMapping("/saveLedgerDetails")
+	public ResponseEntity<Ledger> saveLedgerDetail(@RequestBody Ledger ledger)
+	{
+		Ledger save=ledgerServiceI.saveAllLedgerDetail(ledger);
+		return new ResponseEntity<Ledger>(save,HttpStatus.CREATED);
+	}
+	
+	//API FOR GET LEDGER DETAILS
+	@GetMapping("/getAllLedgerDetails")
+	public ResponseEntity <List<Ledger>> getAllLedgerDetails()
+	{
+		List<Ledger> getAll=ledgerServiceI.getAllLedgerDetails();
+		return new ResponseEntity<List<Ledger>>(getAll,HttpStatus.OK);
+	}
+	
+//    @GetMapping("/getLedgerById/{ledgerId}")
+//	public ResponseEntity<Ledger> getLedgerById(@PathVariable Integer ledgerId)
+//	{
+//    	Ledger getById=ledgerServiceI.getLedgerById(ledgerId);
+//		return new ResponseEntity<Ledger>(getById,HttpStatus.OK);	
+//	}
+    
+    @GetMapping("/getDefaulterById/{ledgerId}")
+    public ResponseEntity<BaseResponce<String>> defaltercount(@PathVariable ("ledgerId") Integer ledgerId )
+    { 
+    	String defalter =  ledgerServiceI.defaultercount(ledgerId);
+    	BaseResponce<String> base=new BaseResponce<String>(201, "Your"+ledgerId+"is Defalter", defalter);
+    	return new ResponseEntity<BaseResponce<String>>(base, HttpStatus.OK);
+ 	
+    	}
+}

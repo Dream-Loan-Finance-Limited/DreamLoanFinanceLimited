@@ -29,7 +29,7 @@ public class CustomerPersonalDetails {
 	private Integer customerAge;
 	private String customerGender;
 	
-	@OneToOne(cascade = CascadeType.ALL)
-	private CustomerAddress customerAddress;
+//	@OneToOne(cascade = CascadeType.ALL)
+//	private CustomerAddress customerAddress;
 	
 }

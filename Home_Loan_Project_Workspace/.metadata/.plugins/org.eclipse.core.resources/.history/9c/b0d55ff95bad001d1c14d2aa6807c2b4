@@ -1,0 +1,11 @@
+package com.homeloan.myapp.repository;
+
+import java.io.Serializable;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.homeloan.myapp.entities.SanctionLetter;
+
+public interface SanctionLetterRepository extends JpaRepository<SanctionLetter,Serializable>{
+
+}

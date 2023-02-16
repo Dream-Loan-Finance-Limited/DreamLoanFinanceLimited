@@ -1,14 +1,20 @@
-<div class="container">
-    <!-- <h1 class="ps-4">{{userType}}</h1> -->
- 
-    <h3>{{viewUserType}}</h3>
 
-    <div *ngFor="let menu of menus[0][userType]" class="p-2">
 
-        <!-- <a [routerLink]="[userType,menu.key]" style="color: #fff;">{{menu.lable}}</a> -->
-        <button type="button" class="btn btn-outline-info"   [routerLink]="[userType,menu.key]" >{{menu.lable}}</button>
 
+    <div class="container">
+        <!-- <h1 class="ps-4">{{userType}}</h1> -->
+     
+        <h3>{{viewUserType}}</h3>
+    
+        <div *ngFor="let menu of menus[0][userType]" class="p-2">
+    
+            <!-- <a [routerLink]="[userType,menu.key]" style="color: #fff;">{{menu.lable}}</a> -->
+            <button type="button" class="btn btn-outline-info"   [routerLink]="[userType,menu.key]" >{{menu.lable}}</button>
+    
+        </div>
+    
+    
     </div>
+    
+    
 
-
-</div>

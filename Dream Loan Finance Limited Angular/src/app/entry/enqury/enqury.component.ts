@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { EnquiryServiceService } from 'src/app/services/enquiry-service.service';
 
 @Component({
   selector: 'app-enqury',
@@ -9,22 +10,33 @@ import { Router } from '@angular/router';
 })
 export class EnquryComponent implements OnInit
 {
-  constructor(private fb:FormBuilder,private router:Router){}
+  constructor(private fb:FormBuilder,private router:Router,private enquiryService:EnquiryServiceService){}
 
   enquiryForm:FormGroup;
   ngOnInit(): void 
   {
     this.enquiryForm=this.fb.group({
-      firstName:[],
-      lastName:[],
-      emailId:[],
-      panNumber:[],
+      enquiryId:[],
+      firstName:['',Validators.required],
+      middleName:['',Validators.required],
+      lastName:['',Validators.required],
+      emailId:['',Validators.required],
+      panNumber:['',Validators.required],
+      contactNumber:['',Validators.required],
+      age:['',Validators.required],
+      gender:['',Validators.required],
+      city:['',Validators.required],
+      requiredLoanAmount:['',Validators.required],
+      annualIncome:['',Validators.required],
 
     })
   }
   onSubmitForm()
     {
+      alert("Enquiry Recived")
 
+     this.enquiryService.saveEnquiry(this.enquiryForm.value).subscribe(); 
+     this.enquiryForm.reset();
       
     }
 

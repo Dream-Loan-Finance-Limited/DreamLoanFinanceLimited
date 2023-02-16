@@ -1,0 +1,22 @@
+h3
+{
+    margin-top: 50px;
+    font-weight: 700;
+    position: relative;
+   margin-left: 15px;
+}
+button
+{
+    text-align: center;
+    width: 200px;
+    padding: 5px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 5px;
+    font-weight: bolder;
+    border: 1px solid #4ae3d4;
+    background: transparent;
+    cursor: pointer;
+    position: relative;
+    color: #fff;
+}

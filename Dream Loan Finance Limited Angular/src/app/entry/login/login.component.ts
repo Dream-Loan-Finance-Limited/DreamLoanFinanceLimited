@@ -25,18 +25,26 @@ export class LoginComponent implements OnInit {
 
   onSubmitLogin()
   {
-    console.log('in method');
-    if(this.loginForm.controls['userName'].value==='RE' && this.loginForm.controls['password'].value==="RE")
+    
+      if(this.loginForm.controls['userName'].value=='RE' && this.loginForm.controls['password'].value=="RE")
     {
-      alert("login");
-      localStorage.setItem('userType','re');
-      this.router.navigateByUrl("/dashboard")
-    }
-    else
+      
+      localStorage.setItem('userType','RelationshipExecutive');
+      this.router.navigateByUrl("/dashboard/RelationshipExecutive")
+   }
+   else if(this.loginForm.controls['userName'].value=='OE' && this.loginForm.controls['password'].value=="OE")
+   {
+       localStorage.setItem('userType','OperationalExecutive');
+       this.router.navigateByUrl("/dashboard/OperationalExecutive")
+   }
+    
+    else if(this.loginForm.controls['userName'].value!='OE','RE' && this.loginForm.controls['password'].value=="OE",'RE')
     {
-      alert("Failed")
-
+      
+      alert("Access Denied")
+      
     }
+    
 
   }
 

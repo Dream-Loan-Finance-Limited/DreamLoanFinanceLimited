@@ -12,6 +12,9 @@ import { HeaderComponent } from './includes/header/header.component';
 import { FooterComponent } from './includes/footer/footer.component';
 import { EmiCalculatorComponent } from './entry/emi-calculator/emi-calculator.component';
 import { EnquryComponent } from './entry/enqury/enqury.component';
+import { HttpClientModule } from '@angular/common/http';
+import { AboutUsComponent } from './entry/about-us/about-us.component';
+
 
 @NgModule({
   declarations: [
@@ -23,11 +26,13 @@ import { EnquryComponent } from './entry/enqury/enqury.component';
     HeaderComponent,
     FooterComponent,
     EmiCalculatorComponent,
-    EnquryComponent
+    EnquryComponent,
+    AboutUsComponent,
+    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,ReactiveFormsModule,FormsModule
+    AppRoutingModule,ReactiveFormsModule,FormsModule,HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

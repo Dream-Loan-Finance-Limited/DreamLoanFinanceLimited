@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+ 
+  		<bean id="doc" name="com.model.Doctor" autowire="byName">
+        <property name="did" value="5001"></property>
+        <property name="dname" value="Dr.XYZ"></property>
+        <property name="dmobileno" value="8888854365l"></property>
+        <property name="demail" value="xyz@gmail.com"></property>
+        </bean>
+        
+               
+        <bean id ="h" name="com.model.Hospital">
+        <property name="hid" value="101"></property>
+        <property name="hname" value="Apolo"></property>
+        <property name="address" value="Mumbai"></property>
+        <property name="phono" value="9876543210l"></property>
+        </bean>         
+        
+ </beans>

@@ -18,6 +18,7 @@
           <th>Current City</th>
           <th>Required Loan</th>
           <th>Annual Income</th>
+          <th>Status</th>
           <th>Action</th>
           <th>Action</th>
 
@@ -40,8 +41,9 @@
             <td>{{enq.city}}</td>
           <td>{{enq.requiredLoanAmount}}</td>
           <td>{{enq.annualIncome}}</td>
-          <td><input type="button" class="btn btn-outline-success" value="Accept"></td>
-          <td><input type="button" class="btn btn-outline-danger" value="reject"></td>
+          <td>{{enq.enquiryStatus}}</td>
+          <td><input type="button" class="btn btn-outline-success"(click)="onAprove(enq)" value="Accept"></td>
+          <td><input type="button" class="btn btn-outline-danger" (click)="deleteEnquiry(enq)" value="reject"></td>
         </tr>
         
         

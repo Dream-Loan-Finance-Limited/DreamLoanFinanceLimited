@@ -28,7 +28,7 @@ export class EnquryComponent implements OnInit
       city:['',Validators.required],
       requiredLoanAmount:['',Validators.required],
       annualIncome:['',Validators.required],
-
+      enquiryStatus:[]
     })
   }
   onSubmitForm()

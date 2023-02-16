@@ -17,8 +17,21 @@ export class ViewEnquiryComponent implements OnInit {
 
       this.enquiry=enq;
     })
-  }
+}
+deleteEnquiry(enq)
+{
+this.enquiryservice.deleteEnquiry(enq).subscribe();
+alert("Delete Data Successfully");
+window.location.reload();
+}
+onAprove(enquiry:any)
+{
+  enquiry.enquiryStatus="Aproved"
+  console.log(enquiry)
+  this.enquiryservice.updateenquiry(enquiry).subscribe();
 
+
+}
 
 
 }

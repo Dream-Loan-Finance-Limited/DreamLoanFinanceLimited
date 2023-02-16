@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;com.SpringSingletonScope&apos; to &apos;com.SpringPrototypeScope&apos;&#x0D;&#x0A;- Original project: &apos;2022_12_02_Spring_Prototype_Scope&apos;&#x0D;&#x0A;- Original element: &apos;2022_12_02_Spring_Prototype_Scope/src/com.SpringSingletonScope&apos;&#x0D;&#x0A;- Renamed element: &apos;2022_12_02_Spring_Prototype_Scope/src/com.SpringPrototypeScope&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;com.SpringSingletonScope&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src&lt;com.SpringSingletonScope" name="com.SpringPrototypeScope" qualified="false" references="true" stamp="1669957616501" textual="false" version="1.0"/>
+</session>

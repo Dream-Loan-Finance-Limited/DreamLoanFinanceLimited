@@ -1,0 +1,50 @@
+<div class="container">
+    <h2>List of Customer who have sent Enquiry</h2>
+   
+    
+      
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+            <th>ID</th>
+          <th>First Name</th>
+          <th>Middle Name</th>
+          <th>Last Name</th>
+          <th>Email-Id</th>
+          <th>Contact Number</th>
+          <th>PAN Number</th>
+          <th>Age</th>
+          <th>Gender</th>
+          <th>Current City</th>
+          <th>Required Loan</th>
+          <th>Annual Income</th>
+          <th>Action</th>
+          <th>Action</th>
+
+
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let enq of enquiry">
+
+            <td>{{enq.enquiryId}}</td>
+            <td>{{enq.firstName}}</td>
+            <td>{{enq.middleName}}</td>
+            <td>{{enq.lastName}}</td>
+            <td>{{enq.emailId}}</td>
+            <td>{{enq.panNumber}} </td>
+            <td>{{enq.contactNumber}}</td>
+            <td>{{enq.age}}</td>
+            <td>{{enq.gender}}</td>
+            <td>{{enq.city}}</td>
+          <td>{{enq.requiredLoanAmount}}</td>
+          <td>{{enq.annualIncome}}</td>
+          <td><input type="button" class="btn btn-outline-success" value="Accept"></td>
+          <td><input type="button" class="btn btn-outline-danger" value="reject"></td>
+        </tr>
+        
+        
+      </tbody>
+    </table>
+  </div>

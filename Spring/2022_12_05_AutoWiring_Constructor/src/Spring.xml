@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+        
+        <bean id="s" class="com.model.Student" autowire="constructor">
+        <constructor-arg name="rollno" value="1" ></constructor-arg>
+        <constructor-arg name="name" value="abc"></constructor-arg>
+        </bean>
+        
+        <bean id="adr" class="com.model.Address">
+        <constructor-arg name="areaname" value="karvenagar"></constructor-arg>
+        <constructor-arg name="cityname" value="Pune"></constructor-arg>
+        </bean>
+        
+ </beans>

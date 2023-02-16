@@ -26,55 +26,25 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-            <td>01</td>
-            <td>John</td>
-            <td>John</td>
-            <td>John</td>
-            <td>john@example.com</td>
-            <td>1234567 </td>
-            <td>John</td>
-            <td>56</td>
-            <td>Male</td>
-            <td>Pune</td>
-          <td>1000000</td>
-          <td>100000</td>
+        <tr *ngFor="let enq of enquiry">
+
+            <td>{{enq.enquiryId}}</td>
+            <td>{{enq.firstName}}</td>
+            <td>{{enq.middleName}}</td>
+            <td>{{enq.lastName}}</td>
+            <td>{{enq.emailId}}</td>
+            <td>{{enq.panNumber}} </td>
+            <td>{{enq.contactNumber}}</td>
+            <td>{{enq.age}}</td>
+            <td>{{enq.gender}}</td>
+            <td>{{enq.city}}</td>
+          <td>{{enq.requiredLoanAmount}}</td>
+          <td>{{enq.annualIncome}}</td>
           <td><input type="button" class="btn btn-outline-success" value="Accept"></td>
           <td><input type="button" class="btn btn-outline-danger" value="reject"></td>
         </tr>
-        <tr>
-            <td>02</td>
-            <td>John</td>
-            <td>John</td>
-            <td>John</td>
-            <td>john@example.com</td>
-            <td>1234567 </td>
-            <td>John</td>
-            <td>56</td>
-            <td>Male</td>
-            <td>Pune</td>
-          <td>1000000</td>
-          <td>100000</td>
-          <td><input type="button" class="btn btn-outline-success" value="Accept"></td>
-          <td><input type="button" class="btn btn-outline-danger" value="reject"></td>
-        </tr>
-        <tr>
-            <td>03</td>
-            <td>John</td>
-            <td>John</td>
-            <td>John</td>
-            <td>john@example.com</td>
-            <td>1234567 </td>
-            <td>John</td>
-            <td>56</td>
-            <td>Male</td>
-            <td>Pune</td>
-          <td>1000000</td>
-          <td>100000</td>
-          <td><input type="button" class="btn btn-outline-success" value="Accept"></td>
-          <td><input type="button" class="btn btn-outline-danger" value="reject"></td>
-        </tr>
-       
+        
+        
       </tbody>
     </table>
   </div>

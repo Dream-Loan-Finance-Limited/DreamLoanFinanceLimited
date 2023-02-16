@@ -12,12 +12,13 @@ export class EnquiryServiceService {
 
   saveEnquiry(enquirydata:FormGroup)
   {
-   return this.http.post("url",enquirydata);
+   return this.http.post("http://localhost:9090/saveEnquiry",enquirydata);
   }
 
   getEnquiry()
   {
-    return this.http.get<any[]>("url");
+    return this.http.get<any[]>("http://localhost:9090/getAllEnquiryDatails");
+    
   }
 
 }

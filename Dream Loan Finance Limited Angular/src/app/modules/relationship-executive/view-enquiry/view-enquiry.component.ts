@@ -17,6 +17,7 @@ export class ViewEnquiryComponent implements OnInit {
 
       this.enquiry=enq;
     })
+<<<<<<< HEAD
 }
 deleteEnquiry(enq)
 {
@@ -32,6 +33,10 @@ onAprove(enquiry:any)
 
 
 }
+=======
+  }
+
+>>>>>>> 5cd6be6c417416ffc8ef8dd1dec8cadde93e4ca2
 
 
 }

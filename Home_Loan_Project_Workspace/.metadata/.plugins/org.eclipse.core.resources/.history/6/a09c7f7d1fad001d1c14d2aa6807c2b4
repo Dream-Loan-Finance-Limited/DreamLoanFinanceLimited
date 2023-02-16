@@ -1,0 +1,10 @@
+package com.homeloan.myapp.serviceImpl;
+
+import org.springframework.stereotype.Service;
+
+import com.homeloan.myapp.serviceI.CustomerBankDetailsServiceI;
+
+@Service
+public class CustomerBankDetailsServiceImpl implements CustomerBankDetailsServiceI{
+
+}

@@ -1,0 +1,21 @@
+package com.homeloan.myapp.entities;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+//to be finalised
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Entity
+public class Installments {
+
+	@Id
+	private Integer installmentId;
+	
+	
+}

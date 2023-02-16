@@ -1,0 +1,54 @@
+package com.homeloan.myapp.entities;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToOne;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Entity
+public class Customer {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Integer customerId;
+	private String customerFirstName;
+	private String customerMiddleName;
+	private String customerLastName;
+    private String customerDateOfBirth;
+    private String customerEmail;
+    private Long contactNumber;
+    private String customerGender;
+    private String customerVerificationStatus;
+	
+    
+	@OneToOne(cascade = CascadeType.ALL)
+	private CustomerPersonalDetails customerPersonalDetails;
+
+	@OneToOne(cascade = CascadeType.ALL)
+	private CustomerAddress customerAddress;
+	
+	@OneToOne(cascade = CascadeType.ALL)
+	private CustomerBankDetails customerBankDetails;
+	
+	private DealerAccountDetails dealerAccountDetails;
+	
+	private Documents documents;
+	
+	private GaurantorDetails gaurantorDetails;
+	
+	private LoanDisbursement LoanDisbursement;
+	
+	private Ledger ledger;
+	
+	private SanctionLetter sanctionLetter;
+	
+}

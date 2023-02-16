@@ -1,0 +1,11 @@
+package com.homeloan.myapp.serviceI;
+
+import com.homeloan.myapp.entities.Customer;
+
+public interface CustomerServiceI {
+
+	Customer saveCustomerDetails(Customer readCustomerValue);
+
+	
+
+}

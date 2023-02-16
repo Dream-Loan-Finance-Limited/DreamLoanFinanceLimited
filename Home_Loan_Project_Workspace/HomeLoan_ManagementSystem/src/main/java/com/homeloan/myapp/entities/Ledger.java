@@ -1,7 +1,6 @@
 package com.homeloan.myapp.entities;
 
 import java.util.Date;
-import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -24,6 +23,7 @@ public class Ledger {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer ledgerId;
+	
 	@CreationTimestamp
 	private Date ledgerCreatedDate;
 	@UpdateTimestamp

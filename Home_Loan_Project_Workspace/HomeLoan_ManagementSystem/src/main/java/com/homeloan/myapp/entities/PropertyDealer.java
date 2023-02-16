@@ -18,7 +18,7 @@ import lombok.NoArgsConstructor;
 public class PropertyDealer {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy =GenerationType.AUTO)
 	private Integer dealerId;
 	
 	private String dealerName;
@@ -29,4 +29,5 @@ public class PropertyDealer {
 	@OneToOne(cascade = CascadeType.ALL)
 	private DealerAccountDetails dealerAccountDetails;
 
+	
 }

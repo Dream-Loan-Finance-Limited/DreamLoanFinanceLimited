@@ -1,0 +1,12 @@
+package com.homeloan.myapp.serviceI;
+
+import java.util.List;
+
+import com.homeloan.myapp.entities.Ledger;
+
+public interface LedgerServiceI {
+
+	public Ledger saveAllLedgerDetail(Ledger ledger);
+
+	public List<Ledger> getAllLedgerDetails();
+}

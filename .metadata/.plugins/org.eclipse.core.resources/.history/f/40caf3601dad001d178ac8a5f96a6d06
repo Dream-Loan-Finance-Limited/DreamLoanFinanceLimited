@@ -1,5 +1,0 @@
-package com.homeloan.myapp.repository;
-
-public interface CustomerBankDetailsRepository {
-
-}

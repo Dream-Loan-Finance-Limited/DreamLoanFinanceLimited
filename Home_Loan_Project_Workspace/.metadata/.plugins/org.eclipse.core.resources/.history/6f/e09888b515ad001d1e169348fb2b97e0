@@ -1,9 +1,0 @@
-package com.homeloan.myapp.controller;
-
-import org.springframework.web.bind.annotation.RestController;
-
-@RestController
-public class CustomerBankDetailsController {
-
-	pribate 
-}

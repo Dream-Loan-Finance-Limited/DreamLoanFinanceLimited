@@ -5,6 +5,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestPart;
 import org.springframework.web.bind.annotation.RestController;
@@ -13,6 +14,8 @@ import org.springframework.web.multipart.MultipartFile;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.homeloan.myapp.entities.BaseResponce;
 import com.homeloan.myapp.entities.Customer;
+import com.homeloan.myapp.entities.EmailAttach;
+import com.homeloan.myapp.entities.SimpleMail;
 import com.homeloan.myapp.serviceI.CustomerServiceI;
 
 @RestController
@@ -26,12 +29,12 @@ public class CustomeController {
 	@PostMapping(value = "/saveCustomerDetails", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
 	public ResponseEntity<BaseResponce<Customer>> saveCustomerDetails(
 			@RequestPart(value = "panCard") MultipartFile panCard,
-			@RequestPart(value = "adhaarCard") MultipartFile adharCard,
-			@RequestPart(value = "Photo") MultipartFile photo,
-			@RequestPart(value = "AddressProof") MultipartFile addressProof,
+			@RequestPart(value = "adharCard") MultipartFile adharCard,
+			@RequestPart(value = "photo") MultipartFile photo,
+			@RequestPart(value = "addressProof") MultipartFile addressProof,
 			@RequestPart(value = "incomeProof") MultipartFile incomeProof,
 			@RequestPart(value = "bankPassBook") MultipartFile bankPassBook,
-			@RequestPart(value = "allData") String customerJson) {
+			@RequestPart(value = "customerJson") String customerJson) {
 
 		BaseResponce<Customer> baseRespCustomer = null;
 		ObjectMapper om = new ObjectMapper();
@@ -52,5 +55,7 @@ public class CustomeController {
 			e.printStackTrace();
 		}
 		return new ResponseEntity<BaseResponce<Customer>>(baseRespCustomer, HttpStatus.OK);
-	}	
+	}
+	
+	
 }

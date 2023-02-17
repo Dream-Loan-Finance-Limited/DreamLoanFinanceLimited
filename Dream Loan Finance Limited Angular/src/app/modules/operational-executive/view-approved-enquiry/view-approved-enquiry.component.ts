@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 import { CibilScoreAPIService } from 'src/app/services/cibil-score-api.service';
 import { EnquiryServiceService } from 'src/app/services/enquiry-service.service';
 
@@ -8,36 +9,57 @@ import { EnquiryServiceService } from 'src/app/services/enquiry-service.service'
   styleUrls: ['./view-approved-enquiry.component.css']
 })
 export class ViewApprovedEnquiryComponent implements OnInit{
-  constructor(private enquiryservice:EnquiryServiceService,private cibilenquiry:CibilScoreAPIService){}
+  constructor(private enquiryservice:EnquiryServiceService,private cibilenquiry:CibilScoreAPIService,private fb:FormBuilder){}
 
 
   enquiry:any[];
   cibil:any;
   showTable: boolean = false;
+  cibilForm:FormGroup;
   ngOnInit(): void {
 
-    this.toggleShowTable
+    this.toggleShowTable();
     
   }
 
   toggleShowTable(): void 
   {
     this.showTable = !this.showTable;
-    this.enquiryservice.getEnquiryByStatus(this.enquiry).subscribe((enquiry:any[])=>
+    this.enquiryservice.getEnquiryByStatusCibil().subscribe((enquiry:any[])=>
     {
-        console.log("in method")
+      
       this.enquiry=enquiry;
     })
   }
 
-
-  oncheckCibil()
+  inCibilApi()
   {
+    this.cibilForm=this.fb.group({
 
-    this.cibilenquiry.getCibilScore().subscribe((cibil:any)=>
-    {
-      this.cibil=cibil;
+      cibilScoreId:[],
+      firstName:[],
+      lastName:[],
+      panNumber:[],
+      cibilScore:[],
+      status:[]
+
+
     })
+
+  }
+
+
+  oncheckCibil(enq:any)
+  {
+    alert("CIBIL Score will be Updated")
+
+    this.cibilenquiry.getCibilScore(enq).subscribe((cibil:any)=>
+    {
+
+      this.cibil=cibil;
+    
+    })
+    window.location.reload();
 
   }
 

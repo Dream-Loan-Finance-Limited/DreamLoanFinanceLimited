@@ -1,14 +1,13 @@
 <div class="container">
     
    
-    <button (click)='toggleShowTable()' class="btn btn-outline-success" id="scanbutton">Show Approved Enquiry</button>
-    <!-- <h2>List of Customer who have sent Enquiry</h2> -->
+
     <table *ngIf='showTable'  class="table" mat-table [dataSource]="dataSource" matSort>
      
       <thead class="thead-dark">
        
         <tr>
-            <th>ID</th>
+          <th>ID</th>
           <th>First Name</th>
           <th>Middle Name</th>
           <th>Last Name</th>
@@ -21,6 +20,7 @@
           <th>Required Loan</th>
           <th>Annual Income</th>
           <th>Status</th>
+          <th>CIBIL Score</th>
           <th>Check CIBIL</th>
           
         </tr>
@@ -33,15 +33,16 @@
             <td>{{enq.middleName}}</td>
             <td>{{enq.lastName}}</td>
             <td>{{enq.emailId}}</td>
-            <td>{{enq.panNumber}} </td>
             <td>{{enq.contactNumber}}</td>
+            <td>{{enq.panNumber}} </td>
             <td>{{enq.age}}</td>
             <td>{{enq.gender}}</td>
             <td>{{enq.city}}</td>
           <td>{{enq.requiredLoanAmount}}</td>
           <td>{{enq.annualIncome}}</td>
           <td>{{enq.enquiryStatus}}</td>
-          <td><input type="button" class="btn btn-outline-success" (click)="oncheckCibil()" value="Check CIBIL" ></td>
+          <td>{{enq.cibilScore}}</td>
+          <td><input type="button" class="btn btn-outline-success" (click)="oncheckCibil(enq)" value="Check CIBIL" ></td>
 
           <!-- <td><input type="button" class="btn btn-outline-success" (click)="onclickUpdate()" value="Accept"></td>
 

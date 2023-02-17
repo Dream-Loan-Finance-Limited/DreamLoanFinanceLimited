@@ -37,5 +37,9 @@ updateenquiry(enquiry:any)
   {
     return this.http.get<any>("http://localhost:9090/getByStatus/"+"Aproved")
   }
+  getEnquiryByStatusCibil()
+  {
+    return this.http.get<any>("http://localhost:9090/getByStatus/")
+  }
 
 }

@@ -35,7 +35,7 @@ updateenquiry(enquiry:any)
 
   getEnquiryByStatus(enquiry:any)
   {
-    return this.http.get<any>("url/"+enquiry.enquiryStatus)
+    return this.http.get<any>("http://localhost:9090/getByStatus/"+"Aproved")
   }
 
 }

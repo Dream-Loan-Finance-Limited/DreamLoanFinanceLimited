@@ -16,17 +16,18 @@ export class ViewApprovedEnquiryComponent implements OnInit{
   showTable: boolean = false;
   ngOnInit(): void {
 
-    this.enquiryservice.getEnquiryByStatus(this.enquiry.values).subscribe((enquiry:any[])=>
-    {
-
-      this.enquiry=enquiry;
-    })
+    this.toggleShowTable
     
   }
 
   toggleShowTable(): void 
   {
     this.showTable = !this.showTable;
+    this.enquiryservice.getEnquiryByStatus(this.enquiry).subscribe((enquiry:any[])=>
+    {
+        console.log("in method")
+      this.enquiry=enquiry;
+    })
   }
 
 

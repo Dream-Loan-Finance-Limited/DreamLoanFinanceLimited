@@ -30,8 +30,12 @@ export class EnquiryServiceService {
 updateenquiry(enquiry:any)
   {
     return this.http.put("http://localhost:9090/update",enquiry);
-    console.log(enquiry)
+    
   }
 
+  getEnquiryByStatus(enquiry:any)
+  {
+    return this.http.get<any>("url/"+enquiry.enquiryStatus)
+  }
 
 }

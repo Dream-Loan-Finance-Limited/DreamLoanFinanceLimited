@@ -33,6 +33,9 @@ const routes: Routes = [
       },
       {
         path:'OperationalExecutive',loadChildren:()=>import("src/app/modules/operational-executive/operational-executive.module").then(oe=>oe.OperationalExecutiveModule)
+      },
+      {
+        path:'CreditManager',loadChildren:()=>import("src/app/modules/credit-manager/credit-manager.module").then(cm=>cm.CreditManagerModule)
       }
     ]
     

@@ -16,6 +16,12 @@ export class Menu {
                 // {lable:'View Approved Enquiry',key:'approvedenquiry'},
                 // {lable:'View Sanction Loan',key:'viewsanctionloan'}
 
+             ],
+             CreditManager:
+             [
+                {lable:'View Loan Application',key:'viewloanapplication'},
+                {lable:'Verify Loan Application',key:'verifyloanapplication'},
+
              ]
 
 

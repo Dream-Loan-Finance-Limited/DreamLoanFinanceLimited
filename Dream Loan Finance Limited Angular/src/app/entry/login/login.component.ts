@@ -37,8 +37,14 @@ export class LoginComponent implements OnInit {
        localStorage.setItem('userType','OperationalExecutive');
        this.router.navigateByUrl("/dashboard/OperationalExecutive")
    }
+   else if(this.loginForm.controls['userName'].value=='CM' && this.loginForm.controls['password'].value=="CM")
+   {
+       localStorage.setItem('userType','CreditManager');
+       this.router.navigateByUrl("/dashboard/CreditManager")
+   }
+
     
-    else if(this.loginForm.controls['userName'].value!='OE','RE' && this.loginForm.controls['password'].value=="OE",'RE')
+    else if(this.loginForm.controls['userName'].value!='OE','RE','CM' && this.loginForm.controls['password'].value=="OE",'RE','CM')
     {
       
       alert("Access Denied")

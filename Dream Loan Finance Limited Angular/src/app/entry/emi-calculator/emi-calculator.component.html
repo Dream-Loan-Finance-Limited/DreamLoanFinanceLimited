@@ -12,7 +12,7 @@
   <input type="number" [(ngModel)]="tenure" placeholder="Enter Loan Tenure"> <br><br>
 <label for="">  Interest Rate:</label><br>
   <input type="number" [(ngModel)]="interest" placeholder="Enter Rate Of Intrest"> <br><br>
-  <button (click)="calculate()">Calculate</button>
+  <button  class="btn btn-info" (click)="calculate()">Calculate</button>
   
   <h1>EMI:{{ emi }}/month</h1>
   <h1>Total Payable Amount :{{totalpay}}/-</h1>

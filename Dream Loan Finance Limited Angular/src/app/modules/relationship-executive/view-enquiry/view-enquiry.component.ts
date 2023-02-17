@@ -27,7 +27,7 @@ window.location.reload();
 onAprove(enquiry:any)
 {
   enquiry.enquiryStatus="Aproved"
-  console.log(enquiry)
+  
   this.enquiryservice.updateenquiry(enquiry).subscribe();
 
 

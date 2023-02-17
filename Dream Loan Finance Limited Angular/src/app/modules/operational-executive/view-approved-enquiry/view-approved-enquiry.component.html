@@ -1,1 +1,62 @@
-<p>view-approved-enquiry works!</p>
+<div class="container">
+    
+   
+    <button (click)='toggleShowTable()' class="btn btn-outline-success" id="scanbutton">Show Approved Enquiry</button>
+    <!-- <h2>List of Customer who have sent Enquiry</h2> -->
+    <table *ngIf='showTable'  class="table" mat-table [dataSource]="dataSource" matSort>
+     
+      <thead class="thead-dark">
+       
+        <tr>
+            <th>ID</th>
+          <th>First Name</th>
+          <th>Middle Name</th>
+          <th>Last Name</th>
+          <th>Email-Id</th>
+          <th>Contact Number</th>
+          <th>PAN Number</th>
+          <th>Age</th>
+          <th>Gender</th>
+          <th>Current City</th>
+          <th>Required Loan</th>
+          <th>Annual Income</th>
+          <th>Status</th>
+          <th>Check CIBIL</th>
+          
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let enq of enquiry">
+
+            <td>{{enq.enquiryId}}</td>
+            <td>{{enq.firstName}}</td>
+            <td>{{enq.middleName}}</td>
+            <td>{{enq.lastName}}</td>
+            <td>{{enq.emailId}}</td>
+            <td>{{enq.panNumber}} </td>
+            <td>{{enq.contactNumber}}</td>
+            <td>{{enq.age}}</td>
+            <td>{{enq.gender}}</td>
+            <td>{{enq.city}}</td>
+          <td>{{enq.requiredLoanAmount}}</td>
+          <td>{{enq.annualIncome}}</td>
+          <td>{{enq.enquiryStatus}}</td>
+          <td><input type="button" class="btn btn-outline-success" (click)="oncheckCibil()" value="Check CIBIL" ></td>
+
+          <!-- <td><input type="button" class="btn btn-outline-success" (click)="onclickUpdate()" value="Accept"></td>
+
+          
+          <td><input type="button" class="btn btn-outline-success"(click)="onAprove(enq)" value="Accept"></td>
+          <td><input type="button" class="btn btn-outline-danger" (click)="deleteEnquiry(enq)" value="reject"></td>
+
+          <td><input type="button" class="btn btn-outline-success" value="Accept"></td>
+
+          <td><input type="button" class="btn btn-outline-danger" value="reject"></td> -->
+
+
+        </tr>
+        
+        
+      </tbody>
+    </table>
+  </div>

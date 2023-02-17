@@ -16,6 +16,6 @@ public interface LedgerRepository extends JpaRepository<Ledger, Serializable>{
 
 	//Optional<Ledger> getLedgerById(Integer ledgerId);
 
-	//List<Ledger> findByLedgerId(Integer ledgerId);
+	
 
 }

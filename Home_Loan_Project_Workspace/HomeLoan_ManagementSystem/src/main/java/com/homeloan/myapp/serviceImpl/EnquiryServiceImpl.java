@@ -32,4 +32,10 @@ public class EnquiryServiceImpl implements EnquiryServiceI {
 		return singleenquiry;
 	}
 
+//	@Override
+//	public List<Enquiry> getEnquiredPersonByStatus(String enquiryStatus) {
+//		List<Enquiry> findAllByEnquiryStatus = enquiryRepository.findAllByStatus(enquiryStatus);
+//		return findAllByEnquiryStatus;
+//	}
+
 }

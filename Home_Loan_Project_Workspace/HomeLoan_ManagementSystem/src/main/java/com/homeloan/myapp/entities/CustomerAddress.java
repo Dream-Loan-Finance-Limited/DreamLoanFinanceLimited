@@ -27,7 +27,7 @@ public class CustomerAddress {
 	private Integer localPinCode;
 	private String localState;
 	
-	private String permanentHouseNumber;
+	private String permanentHouseNo;
 	private String permanentAreaName;
 	private String permanentStreetName;
 	private String permanentCityName;

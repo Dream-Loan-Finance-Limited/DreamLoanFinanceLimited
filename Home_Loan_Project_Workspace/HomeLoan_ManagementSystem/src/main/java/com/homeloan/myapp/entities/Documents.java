@@ -30,6 +30,6 @@ public class Documents {
 	private byte [] addressProof;
 	@Lob
 	private byte[] incomeProof;
-	
+	@Lob
 	private byte[] bankPassBook;
 }

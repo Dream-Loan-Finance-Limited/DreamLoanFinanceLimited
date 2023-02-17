@@ -20,8 +20,8 @@ public class SimpleMail {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer simpleMailId;
 	
-	public String toEmail;
-	public String fromEmail;
+	private String toEmail;
+	private String fromEmail;
 	private String subject;
 	private String text;
 	

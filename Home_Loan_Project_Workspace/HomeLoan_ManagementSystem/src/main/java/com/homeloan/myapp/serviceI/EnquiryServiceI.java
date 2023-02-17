@@ -13,4 +13,7 @@ public interface EnquiryServiceI {
 
 	public Optional<Enquiry> getsingleEnquiryDetail(Integer enquiryId);
 
+	//public List<Enquiry> getEnquiredPersonByStatus(String enquiryStatus);
+
+
 }

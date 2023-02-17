@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Lob;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -24,6 +25,7 @@ public class EmailAttach {
     private String fromEmail;
     private String subject;
     private String text;
-    private byte[] attachment;
+    @Lob
+    private String attachment;
     
 }
